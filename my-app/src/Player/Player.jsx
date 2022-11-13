@@ -18,14 +18,16 @@ const handlePlay = () => {
 };
 return (<>
 
-    <audio ref={audioRef} src={src}/>
+    <audio ref={audioRef} src={src} onTimeUpdate={(e) => {e.target.currentTime 
+      console.log(e)}}/>
   <div onClick={handlePlay} className="player-controls">
       <button className={playing? "play-button play" : "play-button pause"}></button> </div>
   
   </>
 )
-}
 
+}
+//
 
 
 export default Player;

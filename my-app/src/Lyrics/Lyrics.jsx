@@ -20,10 +20,10 @@ if (scrollRef.current !== undefined){
  return (
 <div className="lyrics" >
 
-{lines.map((line) => {
-return (currentLineIndex === line?
-<p ref={scrollRef} key={line.time} className="current-line">{line.text}</p>:
-<p key={line.time}>{line.text}</p>);
+{lines.map((line, scrollIndex) => {
+return (currentLineIndex !== scrollIndex?
+<p key={line.time}>{line.text}</p>:<p ref={scrollRef} key={line.time} className="current-line">{line.text}</p>)
+;
 }
 )
 };

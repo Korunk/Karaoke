@@ -6,9 +6,9 @@ import Player from './Player/Player';
 import './style.css';
 
 const App = () => {
- const [currentLineIndex, setCurrentLineIndex] = useState
- (lyricsLines[4])
- const [scrollIndex, setScrollIndex] = useState(0);
+ //const [currentLineIndex, setCurrentLineIndex] = useState
+ //(lyricsLines[4])
+ const [scrollIndex, setScrollIndex] = useState(5);
 
  const handelChangeIndex= ()=> {
    setScrollIndex()
